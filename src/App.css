@@ -2,37 +2,109 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-header{
+  height: 125px;
+  color: black;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  box-sizing: right;
+  padding: 0px 50px;
+}
+.main-header img {
+  height: 40px;
+}
+.dropdown {
+  display: none;
+}
+.desktop-menu {
+  width: 650px;
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mobile-menu {
+  display: none;
+}
+h3 {
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+}
+h1 {
+  font-size: 60px;
+  text-align: center;
+}
+button {
+  background-color: rgb(255, 225, 0);
   color: white;
+  font-size: 18px;
+  padding: 20px 40px 20px 40px;
+  font-family: 'Arial Bold';
+  border-radius: 7%;
+  cursor: pointer;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media(max-width: 990px){
+  .main-header img {
+    height: 30px;
   }
-  to {
-    transform: rotate(360deg);
+  .desktop-menu{
+   display: none;
   }
-}
+  .dropdown {
+   display: initial;
+   font-size: 18px;
+   background-color: rgb(255, 225, 0);
+   padding: 10px 15px 10px 15px;
+   color: white;
+   border-radius: 7%;
+   cursor: pointer;
+  }
+  .mobile-menu{
+   display: flex;
+   height: 200px;
+   width: 990px;
+   background-color: #3B3B3B;
+   color: white;
+   position: fixed;
+   top: 80px;
+   left: 0%;
+   flex-direction: column;
+   justify-content: space-evenly;
+   text-align: left;
+   padding: 0 0 0 45px;
+   }
+ }
+ @media(max-width: 570px){
+   .main-header img{
+     height: 20px;
+   }
+ .dropdown{
+   display: initial;
+   font-size: 14px;
+   padding: 5px 10px 5px 10px;
+   }
+   .mobile-menu{
+    display: flex;
+    height: 150px;
+    width: 570px;
+    font-size: 14px;
+   }
+   h3 {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+  }
+  h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+   button {
+    background-color: rgb(255, 225, 0);
+    color: white;
+    font-size: 14px;
+    padding: 10px 20px 10px 20px;
+   }
+ }
